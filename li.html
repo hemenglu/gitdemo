@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery练习</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(function() {
+            $("ul li").mouseover(function() {
+                $("ul li").css("background", "none");
+                $(this).css("background", "orange");
+                // $(this).siblings().css("background", "none")
+            })
+            $("ul li").mouseover(function() {
+                var index = $(this).index();
+                console.log(index);
+                $(".lun div").eq(index).show();
+                $(".lun div").eq(index).siblings().hide();
+            })
+        })
+    </script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        position: relative;
+    }
+    
+    .deng ul li {
+        display: block;
+        height: 70px;
+        width: 100px;
+        border: 1px solid pink;
+        text-align: center;
+        line-height: 70px;
+    }
+    
+    li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .lun {
+        border: 1px solid pink;
+        height: 360px;
+        width: 600px;
+        position: absolute;
+        top: 0px;
+        left: 102px;
+    }
+    
+    .lun img {
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div class="deng">
+        <ul>
+            <li>
+                <a href="javascript:;">邓伦一</a>
+            </li>
+            <li>
+                <a href="javascript:;">邓伦一</a>
+            </li>
+            <li>
+                <a href="javascript:;">邓伦一</a>
+            </li>
+            <li>
+                <a href="javascript:;">邓伦一</a>
+            </li>
+            <li>
+                <a href="javascript:;">邓伦一</a>
+            </li>
+        </ul>
+    </div>
+    <div class="lun">
+        <div>
+            <a href=""><img src="img/timg (1).jpg" alt="" height="360px" width="600px"></a>
+        </div>
+        <div>
+            <a href=""><img src="img/timg (2).jpg" alt="" height="360px" width="600px"></a>
+        </div>
+        <div>
+            <a href=""><img src="img/timg (3).jpg" alt="" height="360px" width="600px"></a>
+        </div>
+        <div>
+            <a href=""><img src="img/timg (4).jpg" alt="" height="360px" width="600px"></a>
+        </div>
+        <div>
+            <a href=""><img src="img/timg (5).jpg" alt="" height="360px" width="600px"></a>
+        </div>
+    </div>
+</body>
+
+</html>
